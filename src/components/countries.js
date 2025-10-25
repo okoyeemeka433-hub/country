@@ -1,12 +1,10 @@
-     import { useEffect, useState } from "react";
-  
+import { useEffect, useState } from "react";
 
 export const Countries = () => {
     const [search, setSearch] = useState('')
     const [country, setCountry] = useState([])
 
-
-    const getSearch = country.filter((c) => c.name.common.toLowerCase().includes(search.toLowerCase()))
+  
     
 
 
@@ -61,8 +59,8 @@ export const Countries = () => {
                     <button>Search</button>
                 </form>
                 <div className="">
-                    {getSearch.map((c) => (
-                        <div className="">{c.name.common} <button>Click</button></div>
+                    {country.map((c) => (
+                        <div className="">{c.name.common}</div>
                     ))}
                 </div>
             </div>
